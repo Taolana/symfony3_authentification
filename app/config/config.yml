@@ -86,3 +86,37 @@ fos_user:
 #    profile:
 #        form:
 #            type: AppBundle\Form\ProfileType
+
+hwi_oauth:
+    connect:
+        confirmation: true
+        registration_form: fos_user.registration.form.factory
+    firewall_name: [main]
+    fosub:
+        username_iterations: 30
+        properties:
+            github: githubID
+            google: googleID
+#            microsoft: microsoftID
+#            apple: appleID
+    resource_owners:
+        github:
+            type: github
+            client_id: 8981e7cb51f8b9cc0d35
+            client_secret: 8bbb66f0bbd4ff88638de0c87c1ec1739bc7c592
+            scope: "user:email,public_repo"
+        google:
+            type: google
+            client_id: 149799948034-4rf054hhuv9fhgg1jvuim1ucf9jgsoue.apps.googleusercontent.com
+            client_secret: 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
+            scope: "https://www.googleapis.com/auth/plus.login"
+#        microsoft:
+#            type: microsoft
+#            client_id: <>
+#            client_secret: 8f28eebc-57af-4aa6-907d-ea35ac9d19a5
+#            scope: ""
+#        apple:
+#            type: apple
+#            client_id: <>
+#            client_secret: <>
+#            scope: ""

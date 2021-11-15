@@ -38,17 +38,17 @@ security:
                 # if you are using Symfony < 2.8, use the following config instead:
                 # csrf_provider: form.csrf_provider
 
-#            oauth:
-#                resource_owners:
-#                    github: "/connect/check-github"
-#                    google: "/connect/check-google"
+            oauth:
+                resource_owners:
+                    github: "/connect/check-github"
+                    google: "/connect/check-google"
 #                    microsoft: "/connect/check-microsoft"
 #                    apple: "/connect/check-apple"
-#                login_path: /connect
-#                failure_path: /connect
-#
-#                oauth_user_provider:
-#                    service: hwi_oauth.user.provider.fosub_bridge
+                login_path: /connect
+                failure_path: /connect
+
+                oauth_user_provider:
+                    service: hwi_oauth.user.provider.fosub_bridge
 
             logout: true
             anonymous: true
